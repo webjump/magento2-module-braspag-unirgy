@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Webjump\BraspagPagador\Model\Source\PaymentSplitMarketplaceVendor">
+        <plugin name="braspagPaymentSplitMarketplaceVendorsListSource" type="Braspag\Unirgy\Plugin\PaymentSplitVendorSourceList"/>
+    </type>
+    <type name="Unirgy\DropshipMulti\Ui\DataProvider\Product\Form\Modifier\Vendors">
+        <plugin name="braspagUnirgyDropshipMultiUiDataProviderProductFormModifierVendors" type="Braspag\Unirgy\Plugin\UiDataProviderProductFormModifierVendors"/>
+    </type>
+    <type name="Unirgy\DropshipMulti\Helper\ProductFields">
+        <plugin name="braspagUnirgyDropshipMultiHelperProductFields" type="Braspag\Unirgy\Plugin\HelperProductFields"/>
+    </type>
+    <type name="Webjump\BraspagPagador\Model\SplitDataProvider">
+        <plugin name="braspagSplitDataProvider" type="Braspag\Unirgy\Plugin\SplitDataProvider"/>
+    </type>
+</config>
